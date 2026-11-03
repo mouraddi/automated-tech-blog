@@ -3,7 +3,7 @@ name: Build and Deploy Hugo Site
 on:
   push:
     branches:
-      - main  # أو master حسب فرع المشروع لديك
+      - main
 
 jobs:
   build-and-deploy:
@@ -14,11 +14,13 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          submodules: recursive  # لجلب مظهر PaperMod تلقائياً
+          submodules: recursive
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
+          hugo-version: 'latest'
+
       - name: Build Website
         run: hugo --minify
 
