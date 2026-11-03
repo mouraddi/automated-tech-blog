@@ -1,4 +1,4 @@
-baseURL: 'http://localhost:1313/'
+baseURL: 'https://mouraddi.github.io/automated-tech-blog/'
 languageCode: 'en-us'
 title: 'DevPulse | Open-Source & AI News'
 theme: 'PaperMod'
