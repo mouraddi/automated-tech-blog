@@ -55,7 +55,7 @@ def generate_hugo_post(title, link, summary):
 
     print(f"Generating article in English for: {title}...")
     response = client.models.generate_content(
-        model="gemini-3.8-flash",
+        model="gemini-2.0-flash",
         contents=prompt
     )
     return response.text
