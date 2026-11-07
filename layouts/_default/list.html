@@ -21,7 +21,7 @@
         </section>
 
         <div class="coupons-grid">
-            {{ range .Pages }}
+            {{ range .Site.RegularPages }}
             <div class="coupon-card">
                 <div class="card-header">
                     <span class="store-name">{{ .Params.store }}</span>
