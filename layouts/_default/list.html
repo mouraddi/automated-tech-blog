@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mitgo-verification" content="91490991-b0f3-44c9-b7d4-73363cb72c5c" />
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="/" class="logo">Vokaso<span>Deals</span></a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Verified Coupon Codes & Daily Deals</h1>
+            <p>Save money on your favorite stores with top promo discounts.</p>
+        </section>
+
+        <div class="coupons-grid">
+            {{ range .Pages }}
+            <div class="coupon-card">
+                <div class="card-header">
+                    <span class="store-name">{{ .Params.store }}</span>
+                </div>
+                <h3 class="coupon-title">{{ .Title }}</h3>
+                <p class="coupon-summary">{{ .Params.summary }}</p>
+                <div class="coupon-actions">
+                    {{ if and (.Params.code) (ne .Params.code "NO_CODE") }}
+                    <button class="btn-copy" onclick="copyCode('{{ .Params.code }}', this)">COPY CODE</button>
+                    {{ end }}
+                    <a href="{{ .Params.affiliate_url }}" target="_blank" rel="nofollow sponsored" class="btn-deal">GET DEAL</a>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; {{ now.Format "2006" }} Vokaso.com - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyCode(code, element) {
+            navigator.clipboard.writeText(code);
+            element.innerText = "COPIED!";
+            element.classList.add("copied");
+            setTimeout(() => {
+                element.innerText = "COPY CODE";
+                element.classList.remove("copied");
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

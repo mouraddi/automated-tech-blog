@@ -1,0 +1,7 @@
+﻿baseURL = 'https://vokaso.com/'
+languageCode = 'en-us'
+title = 'Vokaso Deals - Premium Coupons & Discounts'
+theme = ''
+
+[params]
+  description = "Find the latest verified promo codes and exclusive discount deals."
