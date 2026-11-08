@@ -2,12 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://vokaso.com/categories/</loc>
+    <loc>https://vokaso.com/coupons/test-deal/</loc>
+    <lastmod>2026-11-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vokaso.com/coupons/</loc>
-  </url><url>
-    <loc>https://vokaso.com/tags/</loc>
+    <lastmod>2026-11-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vokaso.com/</loc>
+    <lastmod>2026-11-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vokaso.com/categories/</loc>
+  </url><url>
+    <loc>https://vokaso.com/tags/</loc>
   </url>
 </urlset>
